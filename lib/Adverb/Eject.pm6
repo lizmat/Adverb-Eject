@@ -10,7 +10,7 @@ module Adverb::Eject:ver<0.0.1>:auth<cpan:ELIZABETH> {
       \SELF, Iterable:D \pos, :$eject! --> Nil
     ) is export {
         if $eject {
-            SELF.splice($_,1) for pos.sort( -* );
+            SELF.splice($_,1) for pos.unique.sort( -* );
         }
     }
 
@@ -20,10 +20,10 @@ module Adverb::Eject:ver<0.0.1>:auth<cpan:ELIZABETH> {
         SELF.DELETE-KEY(key) if $eject;
     }
     multi sub postcircumfix:<{ }>(
-      \SELF, Iterable:D \pos, :$eject! --> Nil
+      \SELF, Iterable:D \keys, :$eject! --> Nil
     ) is export {
         if $eject {
-            SELF.DELETE-KEY($_) for pos;
+            SELF.DELETE-KEY($_) for keys;
         }
     }
 }
