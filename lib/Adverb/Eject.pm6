@@ -67,7 +67,7 @@ to just resetting the element to its pristine state).
 The reason that the C<:eject> adverb does not return any of the removed values
 is because the C<:delete> already does that.  And for those cases where you
 do not need the values, the C<:eject> adverb has the potential of being more
-efficiient because it wouldn't have to do the work of producing the values.
+efficient because it wouldn't have to do the work of producing the values.
 
 =head1 AUTHOR
 
