@@ -1,6 +1,6 @@
-use v6.c;
+use v6.*;
 
-module Adverb::Eject:ver<0.0.1>:auth<cpan:ELIZABETH> {
+module Adverb::Eject:ver<0.0.2>:auth<zef:lizmat> {
     multi sub postcircumfix:<[ ]>(
       \SELF, Int() $pos, :$eject! --> Nil
     ) is export {
@@ -71,14 +71,14 @@ efficient because it wouldn't have to do the work of producing the values.
 
 =head1 AUTHOR
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/Adverb-Eject . Comments and
 Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018, 2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

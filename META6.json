@@ -1,22 +1,26 @@
 {
-  "auth" : "cpan:ELIZABETH",
-  "authors" : [
+  "auth": "zef:lizmat",
+  "authors": [
     "Elizabeth Mattijsen"
   ],
-  "build-depends" : [ ],
-  "depends" : [ ],
-  "description" : "adverb for ejecting elements",
-  "license" : "Artistic-2.0",
-  "name" : "Adverb::Eject",
-  "perl" : "6.c",
-  "provides" : {
-    "Adverb::Eject" : "lib/Adverb/Eject.pm6"
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "adverb for ejecting elements",
+  "license": "Artistic-2.0",
+  "name": "Adverb::Eject",
+  "perl": "6.c",
+  "provides": {
+    "Adverb::Eject": "lib/Adverb/Eject.rakumod"
   },
-  "resources" : [ ],
-  "source-url" : "https://github.com/lizmat/Adverb-Eject.git",
-  "tags" : [
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/Adverb-Eject.git",
+  "tags": [
     "UTILS"
   ],
-  "test-depends" : [ ],
-  "version" : "0.0.1"
+  "test-depends": [
+  ],
+  "version": "0.0.2"
 }

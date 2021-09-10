@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lizmat/Adverb-Eject.svg?branch=master)](https://travis-ci.org/lizmat/Adverb-Eject)
+[![Actions Status](https://github.com/lizmat/Adverb-Eject/workflows/test/badge.svg)](https://github.com/lizmat/Adverb-Eject/actions)
 
 NAME
 ====
@@ -31,19 +31,19 @@ For `Hash`es, this is similar to the `:delete` adverb, except that it will **not
 
 For `Array`s, this is **also different** from the `:delete` adverb in that it will actually **remove** the indicated element from the `Array` (as opposed to just resetting the element to its pristine state).
 
-The reason that the `:eject` adverb does not return any of the removed values is because the `:delete` already does that. And for those cases where you do not need the values, the `:eject` adverb has the potential of being more efficiient because it wouldn't have to do the work of producing the values.
+The reason that the `:eject` adverb does not return any of the removed values is because the `:delete` already does that. And for those cases where you do not need the values, the `:eject` adverb has the potential of being more efficient because it wouldn't have to do the work of producing the values.
 
 AUTHOR
 ======
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/Adverb-Eject . Comments and Pull Requests are welcome.
 
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018, 2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
