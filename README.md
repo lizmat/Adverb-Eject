@@ -8,19 +8,21 @@ Adverb::Eject - adverb for ejecting elements
 SYNOPSIS
 ========
 
-    use Adverb::Eject;
+```raku
+use Adverb::Eject;
 
-    my @a = ^10;
-    @a[1]:eject; # does *not* return the removed value
-    say @a;      # 0 2 3 4 5 6 7 8 9
-    @a[1,3,5,7]:eject;
-    say @a;      # 0 3 5 7 9
+my @a = ^10;
+@a[1]:eject; # does *not* return the removed value
+say @a;      # 0 2 3 4 5 6 7 8 9
+@a[1,3,5,7]:eject;
+say @a;      # 0 3 5 7 9
 
-    my %h = a => 42, b => 666, c => 371;
-    %h<a>:eject;
-    say %h;      # {b => 666, c => 371};
-    %h<b c>:eject;
-    say %h;      # {}
+my %h = a => 42, b => 666, c => 371;
+%h<a>:eject;
+say %h;      # {b => 666, c => 371};
+%h<b c>:eject;
+say %h;      # {}
+```
 
 DESCRIPTION
 ===========
@@ -40,10 +42,12 @@ Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/Adverb-Eject . Comments and Pull Requests are welcome.
 
+If you like this module, or what I’m doing more generally, committing to a [small sponsorship](https://github.com/sponsors/lizmat/) would mean a great deal to me!
+
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018, 2021 Elizabeth Mattijsen
+Copyright 2018, 2021, 2024 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

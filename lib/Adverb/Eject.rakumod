@@ -1,24 +1,24 @@
 multi sub postcircumfix:<[ ]>(
-  \SELF, Int() $pos, :$eject! --> Nil
-) is export {
+  \SELF, Int() $pos, :$eject!
+--> Nil) is export {
     SELF.splice($pos,1) if $eject;
 }
 multi sub postcircumfix:<[ ]>(
-  \SELF, Iterable:D \pos, :$eject! --> Nil
-) is export {
+  \SELF, Iterable:D \pos, :$eject!
+--> Nil) is export {
     if $eject {
         SELF.splice($_,1) for pos.unique.sort( -* );
     }
 }
 
 multi sub postcircumfix:<{ }>(
-  \SELF, \key, :$eject! --> Nil
-) is export {
+  \SELF, \key, :$eject!
+--> Nil) is export {
     SELF.DELETE-KEY(key) if $eject;
 }
 multi sub postcircumfix:<{ }>(
-  \SELF, Iterable:D \keys, :$eject! --> Nil
-) is export {
+  \SELF, Iterable:D \keys, :$eject!
+--> Nil) is export {
     if $eject {
         SELF.DELETE-KEY($_) for keys;
     }
@@ -32,19 +32,23 @@ Adverb::Eject - adverb for ejecting elements
 
 =head1 SYNOPSIS
 
-  use Adverb::Eject;
+=begin code :lang<raku>
 
-  my @a = ^10;
-  @a[1]:eject; # does *not* return the removed value
-  say @a;      # 0 2 3 4 5 6 7 8 9
-  @a[1,3,5,7]:eject;
-  say @a;      # 0 3 5 7 9
+use Adverb::Eject;
 
-  my %h = a => 42, b => 666, c => 371;
-  %h<a>:eject;
-  say %h;      # {b => 666, c => 371};
-  %h<b c>:eject;
-  say %h;      # {}
+my @a = ^10;
+@a[1]:eject; # does *not* return the removed value
+say @a;      # 0 2 3 4 5 6 7 8 9
+@a[1,3,5,7]:eject;
+say @a;      # 0 3 5 7 9
+
+my %h = a => 42, b => 666, c => 371;
+%h<a>:eject;
+say %h;      # {b => 666, c => 371};
+%h<b c>:eject;
+say %h;      # {}
+
+=end code
 
 =head1 DESCRIPTION
 
@@ -72,9 +76,13 @@ Elizabeth Mattijsen <liz@raku.rocks>
 Source can be located at: https://github.com/lizmat/Adverb-Eject . Comments and
 Pull Requests are welcome.
 
+If you like this module, or what I’m doing more generally, committing to a
+L<small sponsorship|https://github.com/sponsors/lizmat/>  would mean a great
+deal to me!
+
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018, 2021 Elizabeth Mattijsen
+Copyright 2018, 2021, 2024 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

@@ -2,6 +2,13 @@ Revision history for Adverb-Eject
 
 {{$NEXT}}
 
+0.0.4  2024-06-24T18:13:04+02:00
+    - Some code esthetics
+    - Modernize the pod
+    - Add sponsor link and button
+    - Modernize test file extension
+    - Update copyright year
+
 0.0.3  2021-11-07T12:39:59+01:00
     - Remove module statement, we don't need it anymore
 
