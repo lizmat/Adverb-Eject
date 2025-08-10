@@ -1,6 +1,8 @@
 Revision history for Adverb-Eject
 
 {{$NEXT}}
+
+0.0.5  2025-08-10T21:06:22+02:00
     - Add CI badge for each OS
     - Modernized META and doc
     - Coverage testing at 100%
