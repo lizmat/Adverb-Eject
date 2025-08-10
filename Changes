@@ -1,6 +1,10 @@
 Revision history for Adverb-Eject
 
 {{$NEXT}}
+    - Add CI badge for each OS
+    - Modernized META and doc
+    - Coverage testing at 100%
+    - Updated copyright year
 
 0.0.4  2024-06-24T18:13:04+02:00
     - Some code esthetics

@@ -1,4 +1,3 @@
-use v6.c;
 use Test;
 
 use Adverb::Eject;
@@ -23,4 +22,4 @@ is %h<b d f h>:eject, Nil, 'did we get Nil from a multi eject';
 is +%h, 5, 'did the right number of elements get removed';
 is %h.keys.sort, 'c e g i j', 'did the right elements get removed';
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4

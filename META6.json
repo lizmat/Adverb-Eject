@@ -7,20 +7,25 @@
   ],
   "depends": [
   ],
-  "description": "adverb for ejecting elements",
+  "description": "Adverb for ejecting elements",
   "license": "Artistic-2.0",
   "name": "Adverb::Eject",
-  "perl": "6.c",
   "provides": {
     "Adverb::Eject": "lib/Adverb/Eject.rakumod"
   },
+  "raku": "6.c",
   "resources": [
   ],
   "source-url": "https://github.com/lizmat/Adverb-Eject.git",
+  "support": {
+    "bugtracker": "https://github.com/lizmat/Adverb-Eject/issues",
+    "source": "https://github.com/lizmat/Adverb-Eject.git"
+  },
   "tags": [
-    "UTILS"
+    "UTILS",
+    "EJECT"
   ],
   "test-depends": [
   ],
-  "version": "0.0.4"
+  "version": "0.0.5"
 }
